@@ -10,7 +10,7 @@ puts 'Creating 100 fake games...'
     category: Faker::Game.genre,
     description: Faker::Lorem.sentences(number: 2),
     address: Faker::Address.street_address,
-    daily_price: rand(30..50)
+    daily_price: rand(3000..5000)
   )
   game.save!
 end
