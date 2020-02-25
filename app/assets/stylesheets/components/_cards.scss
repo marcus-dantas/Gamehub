@@ -1,0 +1,78 @@
+.games-container {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  grid-gap: 30px 30px;
+  width: 80vw;
+}
+
+.game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+  color: $light-orange;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: $paragraph;
+  box-shadow: 1px 1px 15px 5px rgba(10,10,10, 0.4);
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 20px;
+  & a {
+    color: $orange;
+  }
+}
+
+// /* Trip card */
+
+// .games-container {
+//   display: block;
+//   position: relative;
+//   height: 350px;
+//   box-shadow: 1px 1px  15px 5px rgba(10,10,10, 0.2);
+// }
+
+// .games-container img {
+//   object-fit: cover;
+//   object-position: center;
+//   height: 260px;
+//   width: 100%;
+// }
+
+// .games-container .trip-description {
+//   display: flex;
+//   text-align: left;
+//   margin: 5px;
+//   position: absolute;
+//   bottom: 1px;
+//   left: 5px;
+// }
+
+// .games-container .games-container-pricing {
+//   position: absolute;
+//   bottom: -2px;
+//   right: -515px;
+// }
+
+// .games-container .games-container-avatar {
+//   position: absolute;
+//   right: -500px;
+//   top: -60px;
+//   width: 100px;
+//   height: 100px;
+//   object-position: top;
+//   border-radius: 50%;
+//   box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 15px 15px;
+//   border: solid;
+//   border-width: 1px;
+//   border-top-color: rgb(234, 231, 225);
+//   border-right-color: rgb(234, 231, 225);
+//   border-bottom-color: rgb(234, 231, 225);
+//   border-left-color: rgb(234, 231, 225);
+// }
