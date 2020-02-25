@@ -1,0 +1,30 @@
+.games-container {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  grid-gap: 30px 30px;
+  width: 80vw;
+}
+
+.game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+  color: $pink;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: $light-font;
+  box-shadow: 1px 1px 15px 5px rgba(10,10,10, 0.4);
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 20px;
+  & a {
+    color: $pink;
+  }
+}
