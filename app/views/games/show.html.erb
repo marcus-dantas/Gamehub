@@ -22,10 +22,8 @@
     <div class="form-style-8">
       <%= simple_form_for Booking.new do |f| %>
         <%= f.hidden_field :game_id, value: @game.id %>
-        <%= f.hidden_field :start_date, value: date.today %>
         <%= f.input :duration, placeholder: '5 days' %>
         <%= f.submit "Book game"%>
       <% end %>
     </div>
   </div>
-
