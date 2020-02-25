@@ -2,5 +2,10 @@
 <p><%= @game.category %></p>
 <p><%= @game.description %></p>
 <p><%= @game.daily_price %> £ per Day</p>
+<% if @game.photo.attached? %>
 <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+<% else %>
+  <%= image_tag 'no_image.png', height: 300, width: 300 %>
+
+<% end %>
 <%=  link_to "Home", root_path %>
