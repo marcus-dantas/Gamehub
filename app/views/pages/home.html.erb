@@ -4,3 +4,30 @@
     <p>Get your game on!</p>
   </div>
 </div>
+<div class="container-card-form">
+  <div class="row">
+    <div class="games-container" >
+      <% @games.each do |game| %>
+        <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url(https://source.unsplash.com/random/350x250)">
+          <h3><%= link_to game.title, game_path(game) %></h3>
+          <p><%= game.daily_price %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="form">
+    <h4 class="categories">
+      Category
+    </h4>
+    <li class="cat-list">
+      <ul>Action</ul>
+      <ul>Adventure</ul>
+      <ul>Casual</ul>
+      <ul>MMO</ul>
+      <ul>Racing</ul>
+      <ul>RPG</ul>
+      <ul>Sports</ul>
+      <ul>Strategy</ul>
+    </li>
+  </div>
+</div>
