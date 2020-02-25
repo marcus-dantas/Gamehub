@@ -3,14 +3,15 @@
 #
 # Examples:
 #
-puts 'Creating 100 fake games...'
-100.times do
+puts 'Creating 10 fake games...'
+10.times do
   game = Game.new(
     title: Faker::Game.title,
     category: Faker::Game.genre,
     description: Faker::Lorem.sentences(number: 2),
     address: Faker::Address.street_address,
-    daily_price: rand(3000..5000)
+    daily_price: rand(3000..5000),
+    user_id: 1
   )
   game.save!
 end
