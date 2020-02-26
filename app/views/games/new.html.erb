@@ -1,6 +1,6 @@
 <%= simple_form_for @game do |f| %>
 <%= f.input :title, placeholder: 'e.g. Call of Duty' %>
-<%= f.input :category, placeholder: 'e.g. Action, RPG, MMORPG' %>
+<%= f.input :category, collection: ['Action', 'Adventure', 'Casual', 'MMO', 'Racing', 'RPG', 'Sports', 'Strategy']%>
 <%= f.input :description, placeholder:'Call of Duty is a first-person shooter video game franchise published by Activision', as: :text%>
 <%= f.input :daily_price, placeholder: "£££"%>
  <%= f.input :photo, as: :file %>
