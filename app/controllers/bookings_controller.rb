@@ -1,4 +1,7 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+  end
 
   def new
     @booking = Booking.new
@@ -26,6 +29,7 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
@@ -33,7 +37,6 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  end
   private
   def booking_params
     params.require(:booking).permit(:id, :duration, :user_id, :game_id)
