@@ -1,9 +1,6 @@
 <!-- <div class="container">
   <div class="description">
     <p>Lorem Ipsum</p> -->
-
-
-
 <div class="grid">
     <div>
       <h1>Description</h1>
@@ -14,7 +11,7 @@
       <p><%= @game.category %></p>
       <p><%= @game.daily_price/100 %> £ per Week</p>
       <% if @game.photo.attached? %>
-        w  <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
       <% else %>
         <%= image_tag 'no_image.png', height: 300, width: 300 %>
       <% end %>
