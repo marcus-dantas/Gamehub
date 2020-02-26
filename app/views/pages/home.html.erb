@@ -1,33 +1,39 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(assets/game_banner_1.jpg);">
-  <div class="container">
+  <div class="container-banner">
     <h1 class="title">GameHub</h1>
     <p>Get your game on!</p>
   </div>
 </div>
 <div class="container-card-form">
-  <div class="row">
-    <div class="games-container" >
-      <% @games.each do |game| %>
-        <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url(https://source.unsplash.com/random/350x250)">
+  <div class="games-container cards" >
+    <% @games.each do |game| %>
+      <% if game.photo.attached? %>
+        <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 300, width: 400, crop: :crop %>')">
           <h3><%= link_to game.title, game_path(game) %></h3>
-          <p><%= game.daily_price %></p>
+          <p>Price per day - £<%= game.daily_price %></p>
+        </div>
+         <%else %>
+         <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= image_path 'no_image.png', height: 300, width: 300 %>')">
+          <h3><%= link_to game.title, game_path(game) %></h3>
+          <p>Price per day - £<%= game.daily_price %></p>
         </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
-  <div class="form">
+  <div class="cat-container">
     <h4 class="categories">
       Category
     </h4>
     <li class="cat-list">
-      <ul>Action</ul>
-      <ul>Adventure</ul>
-      <ul>Casual</ul>
-      <ul>MMO</ul>
-      <ul>Racing</ul>
-      <ul>RPG</ul>
-      <ul>Sports</ul>
-      <ul>Strategy</ul>
+      <ul><%= link_to 'All Categories', root_path %></ul>
+      <ul><%= link_to 'Action', root_path(category: 'Action') %></ul>
+      <ul><%= link_to 'Adventure', root_path(category: 'Adventure') %></ul>
+      <ul><%= link_to 'Casual', root_path(category: 'Casual') %></ul>
+      <ul><%= link_to 'MMO', root_path(category: 'MMO') %></ul>
+      <ul><%= link_to 'Racing', root_path(category: 'Racing') %></ul>
+      <ul><%= link_to 'RPG', root_path(category: 'RPG') %></ul>
+      <ul><%= link_to 'Sports', root_path(category: 'Sports') %></ul>
+      <ul><%= link_to 'Strategy', root_path(category: 'Strategy') %></ul>
     </li>
   </div>
 </div>
