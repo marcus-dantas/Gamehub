@@ -13,7 +13,7 @@
       <% if @game.photo.attached? %>
       <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
       <% else %>
-        <%= image_tag 'no_image.png', height: 300, width: 300 %>
+        <%= image_tag 'no_image.png', height: 200, width: 200 %>
       <% end %>
     </div>
     <div class="form-style-8">
