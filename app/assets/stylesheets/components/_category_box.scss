@@ -1,15 +1,29 @@
-.form {
+.cat-container {
   background:$orange;
-  position: absolute;
-  right: 0;
-  width: 200px;
-  margin-right: 20px
+  width: 20%;
 }
 
 .categories {
-
+  margin: 10px;
+  text-align: center;
 }
 
 .cat-list {
-  color: $white
+  color: $white;
+  list-style: none;
+  padding: 0 20px;
 }
+
+// Below is an attempt at a media query to
+// change the category card on the home
+// page into a drop down, after it tocuches
+// the cards
+
+// @media (min-width: 1320px) {
+//   .cat-container {
+//     overflow: hidden;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//   }
+// }
