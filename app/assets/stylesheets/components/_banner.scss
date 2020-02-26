@@ -2,23 +2,24 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  border-bottom: solid;
+  border-top: solid;
 }
 
 .title {
   font-family: $title;
-  margin: 0;
+  margin-left: 50px;
   color: $orange;
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
   font-weight: bold;
   text-shadow: 3px 3px 3px black;
 }
 
 .banner p {
+  margin-left: 55px;
   font-size: 30px;
   font-family: $paragraph;
   color: $white;
   opacity: .7;
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-shadow: 3px 3px 3px black;
 }
