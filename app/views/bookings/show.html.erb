@@ -1,0 +1,20 @@
+
+
+<h1>Your booking</h1>
+<div class="container">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h3 class="card-title"><%= @booking.game.title %></h3>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= @booking.duration %> days</li>
+    <li class="list-group-item">Starting at: <%= @booking.created_at %></li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <%= link_to "Check more games", root_path, class: "btn btn-dark" %>
+  </div>
+</div>
