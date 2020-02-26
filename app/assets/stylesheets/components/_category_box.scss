@@ -14,16 +14,9 @@
   padding: 0 20px;
 }
 
-// Below is an attempt at a media query to
-// change the category card on the home
-// page into a drop down, after it tocuches
-// the cards
-
-// @media (min-width: 1320px) {
-//   .cat-container {
-//     overflow: hidden;
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-// }
+.cat-btn {
+  color: $purple;
+  &:hover {
+    text-decoration: none;
+  }
+}
