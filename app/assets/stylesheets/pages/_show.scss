@@ -1,0 +1,49 @@
+
+.show-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.description {
+  
+  width: 400px;
+  height: 400px;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  background: $orange;
+  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+ 
+}
+
+.show-card {
+  
+  width: 400px;
+  height: 400px;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  background: $orange;
+  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+ 
+}
+
+
+.description:hover, .show-card:hover, .form-style-8:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.form-style-8 {
+  position: relative;
+  background: $orange;
+  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
