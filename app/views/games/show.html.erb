@@ -22,7 +22,7 @@
     <div class="form-style-8">
       <%= simple_form_for Booking.new do |f| %>
         <%= f.hidden_field :game_id, value: @game.id %>
-        <%= f.input :duration, placeholder: '5 days' %>
+        <%= f.input :duration, :collection => %w[3 5 7 14] %>
         <%= f.submit "Book game"%>
       <% end %>
     </div>
