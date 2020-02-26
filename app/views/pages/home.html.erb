@@ -8,12 +8,12 @@
   <div class="games-container cards" >
     <% @games.each do |game| %>
       <% if game.photo.attached? %>
-        <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 300, width: 400, crop: :crop %>')">
+        <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 165, width: 300, crop: :crop%>')">
           <h3><%= link_to game.title, game_path(game) %></h3>
           <p>Price per day - £<%= game.daily_price %></p>
         </div>
          <%else %>
-         <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= image_path 'no_image.png', height: 300, width: 300 %>')">
+         <div class="game-card" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= image_path 'no_image.png', height: 165, width: 300 %>')">
           <h3><%= link_to game.title, game_path(game) %></h3>
           <p>Price per day - £<%= game.daily_price %></p>
         </div>
