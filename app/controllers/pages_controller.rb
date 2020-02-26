@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     # just Game.all
     
     if params[:category].present?
-      @games = Game.where(category: params[:category])
+     @games = Game.where(category: params[:category])
     else
     @games = Game.all
     end
