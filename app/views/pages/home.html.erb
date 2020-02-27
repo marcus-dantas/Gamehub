@@ -19,7 +19,7 @@
                 <h3><%= link_to game.title, game_path(game) %></h3>
                 <p><%= game.category %></p>
               </div>
-              <p class="game-price">Price per day - £<%= game.daily_price %></p>
+              <p class="game-price">£<%= game.daily_price %></p>
             </div>
           </div>
         <%else %>
@@ -30,7 +30,7 @@
              <div class="game-card-title">
               <h3><%= link_to game.title, game_path(game) %></h3>
                <p><%= game.category %></p></div>
-              <p class="game-price">Price per day - £<%= game.daily_price %></p>
+              <p class="game-price">£<%= game.daily_price %></p>
         </div>
         </div>
         <% end %>
