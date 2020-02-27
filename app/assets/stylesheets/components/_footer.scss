@@ -3,24 +3,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 60px;
   padding: 0px 50px;
-  color: $orange;
+  color: $textcolor;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: $purple;
+  color: #4267B2;
   // opacity: 0.6;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 40px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
-  color: $orange;
+  color: black;
 }
 .footer .fa-heart {
   color: #D23333;
@@ -30,5 +30,5 @@
   font-weight: 900;
   font-style: italic;
   font-size: 24px;
-  color: $purple;
+  color: $textcolor;
 }
