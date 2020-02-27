@@ -2,6 +2,9 @@
   <div class="container-banner">
     <h1 class="title">GameHub</h1>
     <p>Get your game on!</p>
+    <div>
+      <%= link_to "Rent out your game!", new_game_path, class: "nav-link btn call-action cat-back-pulse" %>
+    </div>
   </div>
 </div>
 <div class="container-card-form">
@@ -23,12 +26,13 @@
     <% end %>
   </div>
   <div class="cat-container">
-    <h4 class="categories">
-      Category
-    </h4>
+    <!-- <h2 class="categories">
+      CATEGORIES
+    </h2> -->
     <li class="cat-list">
       <ul><%= link_to 'All Categories', root_path, class: "cat-btn cat-back-pulse" %></ul>
       <hr>
+
       <ul><%= link_to 'Action', root_path(category: 'Action'), class: "cat-btn cat-back-pulse" %></ul>
       <hr>
       <ul><%= link_to 'Adventure', root_path(category: 'Adventure'), class: "cat-btn cat-back-pulse" %></ul>
