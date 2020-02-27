@@ -4,16 +4,16 @@
 <div class="container-booking">
 
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src= "" alt="Card image cap">
   <div class="card-body">
     <h3 class="card-title"><%= @booking.game.title %></h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Duration: <%= @booking.duration %> days</li>
-    <%  %>
     <li class="list-group-item">Starting at: <%= @booking.created_at.strftime('%d/%m/%y') %></li>
     <li class="list-group-item">Finishing at: <%= (@booking.created_at + (86400 * @booking.duration)).strftime('%d/%m/%y') %> </li>
+    <li class="list-group-item">Price to Pay: £ <%= @booking.game.daily_price * @booking.duration %></li>
   </ul>
   <div class="card-body">
     <%= link_to "Check more games", root_path, class: "btn btn-dark" %>

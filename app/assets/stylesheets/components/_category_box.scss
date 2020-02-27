@@ -1,5 +1,6 @@
 .cat-container {
   width: 20%;
+
   h2 {
       font-family: Raleway;
       text-decoration: underline solid rgb(68, 68, 68);
@@ -19,6 +20,8 @@
   list-style: none;
   padding: 0 20px;
   text-align: center;
+  position: sticky;
+  top: 10px;
 
   a {
       font-family: Helvetica;
