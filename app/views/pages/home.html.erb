@@ -11,16 +11,16 @@
   <div class="row w-75" >
     <% @games.each do |game| %>
       <div class="col-4 pb-3">
-      
+
         <% if game.photo.attached? %>
-        
+
           <div class="game-card">
-            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 165, width: 300 , crop: :crop%>')">
+            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 165, width: 300 , crop: :fit %>'); background-repeat: no-repeat; background-position: center;">
             </div>
             <div class="game-card-info">
               <div class="game-card-title">
                 <h3><%= link_to game.title, game_path(game) %></h3>
-                <p><%= game.category %></p>
+                <p class="test-ben"><%= game.category %></p>
               </div>
               <p class="game-price">£<%= game.daily_price %></p>
             </div>
@@ -32,7 +32,7 @@
             <div class="game-card-info">
              <div class="game-card-title">
               <h3><%= link_to game.title, game_path(game) %></h3>
-               <p><%= game.category %></p></div>
+               <p class="test-ben"><%= game.category %></p></div>
               <p class="game-price">£<%= game.daily_price %></p>
         </div>
         </div>
