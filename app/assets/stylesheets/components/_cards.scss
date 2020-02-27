@@ -74,21 +74,22 @@
 .game-card-title a {
   font-weight: bold;
   text-decoration: none;
-  
+  color: $textcolor;
 }
 
 .game-price {
   font-weight: bold;
-  background: #5f6caf;
+  background: $button;
   color: white;
   padding: 7px;
   border-radius: 5px;
- 
+
 
 }
 .game-card {
   background: white;
   border-radius: 5px;
+  border: solid 1px;
 }
 
 .game-card-info {
