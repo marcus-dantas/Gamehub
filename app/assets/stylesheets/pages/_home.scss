@@ -5,6 +5,10 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom right, rgba(95, 108, 175, 0.75),rgba(95, 108, 175, 0)), url("background_img");
-  background-size: cover;
+  // background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.99),rgba(0, 0, 0, 0.5)), image_url("background_img.jpeg");
+  // background-size: cover;
+}
+
+.game-card {
+  background-repeat: no-repeat;
 }

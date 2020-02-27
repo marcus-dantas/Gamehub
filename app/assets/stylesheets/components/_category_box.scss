@@ -34,25 +34,3 @@
       color: $orange;
       }
 }
-
-ul:hover {
-         -webkit-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        transform: scale(1.5);
-}
-
-
-
-// Below is an attempt at a media query to
-// change the category card on the home
-// page into a drop down, after it tocuches
-// the cards
-
-// @media (min-width: 1320px) {
-//   .cat-container {
-//     overflow: hidden;
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-// }

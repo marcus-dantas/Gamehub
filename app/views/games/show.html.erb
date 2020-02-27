@@ -1,17 +1,17 @@
 <!-- <div class="container">
   <div class="description">
     <p>Lorem Ipsum</p> -->
-<div class="grid">
-    <div>
+<div class="show-container">
+    <div class="description">
       <h1>Description</h1>
       <p><%= @game.description %></p>
     </div>
-    <div>
+    <div class="show-card">
       <h2><%= @game.title %></h2>
       <p><%= @game.category %></p>
-      <p><%= @game.daily_price/100 %> £ per Week</p>
+      <p><%= @game.daily_price %> £ per Week</p>
       <% if @game.photo.attached? %>
-      <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @game.photo.key, height: 200, width: 200, crop: :fill, class: "show-image" %>
       <% else %>
         <%= image_tag 'no_image.png', height: 200, width: 200 %>
       <% end %>

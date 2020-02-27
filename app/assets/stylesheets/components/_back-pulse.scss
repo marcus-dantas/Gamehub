@@ -1,0 +1,26 @@
+/* Back Pulse */
+@include keyframes(cat-back-pulse) {
+  50% {
+    background-color: $purple;
+  }
+}
+
+@mixin back-pulse {
+  @include hacks();
+  overflow: hidden;
+  @include prefixed(transition-duration, $fastDuration);
+  @include prefixed(transition-property, "color, background-color");
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include prefixed(animation-name, cat-back-pulse);
+    @include prefixed(animation-duration, 0.1s);
+    @include prefixed(animation-delay, $fastDuration);
+    @include prefixed(animation-timing-function, linear);
+    @include prefixed(animation-iteration-count, once);
+    background-color: $activeColor;
+    background-color: $white;
+    color: $orange;
+  }
+}
