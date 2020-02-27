@@ -8,18 +8,70 @@
 
 .title {
   font-family: $title;
-  margin-left: 50px;
+  margin-left: 100px;
   color: $orange;
   font-size: 60px;
   font-weight: bold;
   text-shadow: 3px 3px 3px black;
+  animation: moveInRight 1s ease-out;
+  backface-visibility: hidden;
 }
 
 .banner p {
-  margin-left: 55px;
+  margin-left: 105px;
   font-size: 30px;
   font-family: $paragraph;
-  color: $white;
-  opacity: .7;
+  color: $orange;
+  // opacity: .7;
   text-shadow: 3px 3px 3px black;
+  animation: moveInLeft 1s ease-out;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInRight{
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
