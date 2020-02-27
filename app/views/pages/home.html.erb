@@ -21,13 +21,13 @@
     <% end %>
   </div>
   <div class="cat-container">
-    <h4 class="categories">
-      Category
-    </h4>
+    <h2 class="categories">
+      CATEGORIES
+    </h2>
     <li class="cat-list">
       <ul><%= link_to 'All Categories', root_path %></ul>
       <hr>
-      <ul><%= link_to 'Action', root_path(category: 'Action') %></ul>
+      <ul><%= link_to 'Action', root_path(category: 'Action'), class: "hello" %></ul>
       <hr>
       <ul><%= link_to 'Adventure', root_path(category: 'Adventure') %></ul>
       <hr>

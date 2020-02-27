@@ -1,18 +1,47 @@
 .cat-container {
-  background:$orange;
   width: 20%;
+  h2 {
+      font-family: Raleway;
+      text-decoration: underline solid rgb(68, 68, 68);
+      letter-spacing: 2.0px;
+    }
+
 }
 
 .categories {
   margin: 10px;
   text-align: center;
-}
+  color: $white;
+  }
 
 .cat-list {
   color: $white;
   list-style: none;
   padding: 0 20px;
+  text-align: center;
+
+  a {
+      font-family: Helvetica;
+      font-size: 20px;
+      color: $white;
+      font-weight: bold;
+      opacity: 0.5;
+      text-decoration: none;
+      }
+  a:hover
+      {
+      opacity: 0.8;
+      color: $orange;
+      }
 }
+
+ul:hover {
+         -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+}
+
+
 
 // Below is an attempt at a media query to
 // change the category card on the home
