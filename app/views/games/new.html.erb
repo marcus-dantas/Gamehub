@@ -1,17 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
+<div class="new-container">
+   <div class="row justify-content-center">
+    <div class="col-lg-6">
       <%= simple_form_for @game do |f| %>
-      <%= f.input :title, placeholder: 'e.g. Call of Duty' %>
+      <%= f.input :title, placeholder: 'e.g. Call of Duty', class: "in" %>
       <%= f.input :category, collection: ['Action', 'Adventure', 'Casual', 'MMO', 'Racing', 'RPG', 'Sports', 'Strategy']%>
       <%= f.input :description, placeholder:'Call of Duty is a first-person shooter video game franchise published by Activision', as: :text%>
       <%= f.input :daily_price, placeholder: "£££"%>
       <%= f.input :address, placeholder: "e.g. London, Kingsland Road N27 6GT" %>
-       <%= f.input :photo, as: :file %>
-      <%= f.submit "Submit"%>
+      <%= f.input :photo, as: :file, class: "upload" %>
+      <%= f.submit "Submit", class: "button" %>
       <% end %>
     </div>
-    <div class="col-sm-3"></div>
   </div>
 </div>

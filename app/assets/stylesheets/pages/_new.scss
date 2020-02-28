@@ -1,27 +1,31 @@
-.devise-form {
+.new-container {
+  width: 700px;
   background-color: $white;
   border-radius: 7px;
-  margin: 150px auto;
+  margin: 70px auto;
   padding: 30px;
   box-shadow: 4px 4px 8px $button;
-  border: 0.5px solid black;
-  font-weight: 500;
-  h2 {
-    font-weight: 600;
+  border: 0.5px solid $black;
+  font-weight: 600;
+  color: $textcolor;
+  #game_photo {
+    font-size: 16px;
   }
-  .btn {
+  .button {
     background-color: $button;
     border-radius: 5px;
     border: 0.5px solid $white;
     box-shadow: 1px 1px 3px $button;
     margin-bottom: 10px;
+    padding: 4px 10px;
     &:hover {
       font-weight: semi-bold;
-      font-size: 16px;
-      padding: 6px 13px;
+      font-size: 20px;
+      padding: 4px 11px;
       background-color: $white;
       transition: all 1.5s;
       border: 1px solid $button;
     }
   }
 }
+
