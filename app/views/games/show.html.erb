@@ -20,5 +20,16 @@
         <% end %>
       </div>
     </div>
+    <div class="col-lg-6">
+      <div class="review-holder">
+          <h3>Reviews</h3>
+        <% @game.reviews.each do |review| %>
+          <div class="review-card">
+            <p><%= "*" * review.rating %></p>
+            <p><%= review.content %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
