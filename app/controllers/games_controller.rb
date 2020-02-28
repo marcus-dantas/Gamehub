@@ -17,6 +17,7 @@ class GamesController < ApplicationController
     if game.save
       flash[:notice] = "Your game posted successfully "
       redirect_to game_path(game)
+      redirect_to root_path
     else
       render :new
     end
