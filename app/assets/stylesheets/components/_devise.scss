@@ -9,19 +9,19 @@
   h2 {
     font-weight: 600;
   }
-  .btn {
-    background-color: $orange;
-    border-radius: 5px;
-    border: 0.5px solid $white;
-    box-shadow: 1px 1px 3px $light-orange;
-    margin-bottom: 10px;
-    &:hover {
-      font-weight: semi-bold;
-      font-size: 20px;
-      padding: 6px 13px;
-      background-color: $white;
-      transition: all 1.5s;
-      border: 1px solid $orange;
-    }
-  }
+  // .btn {
+  //   background-color: $orange;
+  //   border-radius: 5px;
+  //   border: 0.5px solid $white;
+  //   box-shadow: 1px 1px 3px $light-orange;
+  //   margin-bottom: 10px;
+  //   &:hover {
+  //     font-weight: semi-bold;
+  //     font-size: 20px;
+  //     padding: 6px 13px;
+  //     background-color: $white;
+  //     transition: all 1.5s;
+  //     border: 1px solid $orange;
+  //   }
+  // }
 }

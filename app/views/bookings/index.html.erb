@@ -1,21 +1,33 @@
 <h1 class="booking-title">Your bookings</h1>
-
+<div class="bookings-grid">
     <% @bookings.each do |booking| %>
-  <div class="container">
+  <div class="bookings-container">
+
     <div class="card border-dark mb-3">
-      <div class="card-header" style="text-align: center;"><%= booking.game.title %></div>
-        <p>Starting date: <%= booking.created_at.strftime('%d/%m/%y') %></p>
-        <p> Remember to return the game on <%= (booking.created_at + (86400 * booking.duration)).strftime('%d/%m/%y') %> </p>
-        <%= link_to "Delete booking" ,
+      <h1 class="card-header" style="text-align: center;"><%= booking.game.title %></h1>
+        <div class="booking-content">
+          <p>Starting date: <%= booking.created_at.strftime('%d/%m/%y') %></p>
+          <p> Remember to return the game on <%= (booking.created_at + (86400 * booking.duration)).strftime('%d/%m/%y') %> </p>
+          <div class="game-img-bookings">
+            <% if booking.game.photo.attached? %>
+              <%= cl_image_tag booking.game.photo.key, height: 100, width: 100, crop: :fill, class: "show-image" %>
+            <% else %>
+              <%= image_tag 'no_image.png', height: 100, width: 100 %>
+            <% end %>
+          </div>
+          <%= link_to "Delete booking" ,
                         booking_path(booking),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
+        </div>
       </div>
-<!--       <div class="review-form">
-        <%#= simple_form_for([ @booking, @review ]) do |form| %>
-          <#%= form.input :content, as: :text %>
-          <#%= form.button :submit %>
-        <#% end %>
-      </div> -->
+      <div class="review-form">
+        <%= simple_form_for([ booking, Review.new ]) do |form| %>
+          <%= form.input :content, as: :text %>
+          <%= form.input :rating, as: :integer %>
+          <%= form.button :submit, "Review" %>
+        <% end %>
+      </div>
     </div>
   <% end %>
+</div>
