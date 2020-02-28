@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
   end
-  
+
   def new
     @game = Game.new
   end
@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     game = Game.new(game_params)
     game.user = current_user
     if game.save
-      redirect_to game_path(game) 
+      redirect_to root_path(game)
     else
       render :new
     end
