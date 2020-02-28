@@ -4,14 +4,14 @@
       <div class="show-form">
         <h1><%= @game.title %></h1>
           <% if @game.photo.attached? %>
-            <%= cl_image_tag @game.photo.key, height: 200, width: 200, crop: :fill, class: "show-image" %>
+            <%= cl_image_tag @game.photo.key, height: 200, width: 300, crop: :fit, class: "show-image" %>
           <% else %>
-            <%= image_tag 'no_image.png', height: 200, width: 200 %>
+            <%= image_tag 'no_image.png', height: 200, width: 300, crop: :fit %>
           <% end %>
         <p><strong><%=@game.category %></strong></p>
 
         <p><strong>Description:</strong> <%= @game.description %></p>
-        <p><%= @game.daily_price %> £ per Week</p>
+        <p>£<%= @game.daily_price %> per day</p>
         <p><%= @game.address %></p>
         <%= simple_form_for Booking.new do |f| %>
         <%= f.hidden_field :game_id, value: @game.id %>
@@ -22,7 +22,3 @@
     </div>
   </div>
 </div>
-
-<% @game.reviews.each do |review| %>
-  <%= review.rating %>
-<% end %>
