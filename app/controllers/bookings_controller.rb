@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.where(user: current_user)
     @review = Review.new
+    @game = Game.new
   end
 
   def new
