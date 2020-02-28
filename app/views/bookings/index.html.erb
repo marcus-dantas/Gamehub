@@ -9,22 +9,23 @@
           <p>Starting date: <%= booking.created_at.strftime('%d/%m/%y') %></p>
           <p> Remember to return the game on <%= (booking.created_at + (86400 * booking.duration)).strftime('%d/%m/%y') %> </p>
           <div class="game-img-bookings">
+          <% link_to  %>
             <% if booking.game.photo.attached? %>
-              <%= cl_image_tag booking.game.photo.key, height: 100, width: 100, crop: :fill, class: "show-image" %>
+              <%= cl_image_tag booking.game.photo.key, height: 120, width: 120, crop: :fill, class: "show-image" %>
             <% else %>
-              <%= image_tag 'no_image.png', height: 100, width: 100 %>
+              <%= image_tag 'no_image.png', height: 120, width: 120 %>
             <% end %>
           </div>
-          <%= link_to "Delete booking" ,
+          <strong><%= link_to "Delete booking" ,
                         booking_path(booking),
                         method: :delete,
-                        data: { confirm: "Are you sure?" } %>
+                        data: { confirm: "Are you sure?" } %></strong>
         </div>
       </div>
       <div class="review-form">
         <%= simple_form_for([ booking, Review.new ]) do |form| %>
-          <%= form.input :content, as: :text %>
-          <%= form.input :rating, as: :integer %>
+          <%= form.input :content, as: :text, label: 'Review'%>
+          <%= form.input :rating, :collection => %w[1 2 3 4 5] %>
           <%= form.button :submit, "Review" %>
         <% end %>
       </div>
