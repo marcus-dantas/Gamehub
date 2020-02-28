@@ -15,7 +15,7 @@
         <% if game.photo.attached? %>
 
           <div class="game-card">
-            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= cl_image_path game.photo.key, height: 165, width: 300 , crop: :fit %>'); background-repeat: no-repeat; background-position: center;">
+            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.1), rgba(20,20,20, 0.1)), url('<%= cl_image_path game.photo.key, height: 165, width: 300 , crop: :fit %>'); background-repeat: no-repeat; background-position: center;">
             </div>
             <div class="game-card-info">
               <div class="game-card-title">
@@ -27,7 +27,7 @@
           </div>
         <%else %>
         <div class="game-card">
-            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.4), rgba(20,20,20, 0.4)), url('<%= image_path 'no_image.png', height: 165, width: 300 %>')">
+            <div class="game-image" style="background-image: linear-gradient(rgba(20,20,20, 0.1), rgba(20,20,20, 0.1)), url('<%= image_path 'no_image.png', height: 165, width: 300 %>')">
             </div>
             <div class="game-card-info">
              <div class="game-card-title">
