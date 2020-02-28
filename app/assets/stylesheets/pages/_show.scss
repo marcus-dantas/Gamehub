@@ -18,21 +18,22 @@
   p {
     font-size: 20px;
   }
-  .btn {
-    background-color: $button;
-    border-radius: 5px;
-    border: 0.5px solid $white;
-    box-shadow: 1px 1px 3px $button;
-    margin-bottom: 10px;
-    &:hover {
-      font-weight: semi-bold;
-      font-size: 20px;
-      padding: 4px 12px;
-      background-color: $white;
-      transition: all 1.5s;
-      border: 1px solid $button;
-    }
-  }
+  // .btn {
+  //   background-color: $button;
+  //   border-radius: 5px;
+  //   border: 0.5px solid $white;
+  //   box-shadow: 1px 1px 3px $button;
+  //   margin-bottom: 10px;
+  //   &:hover {
+  //     font-w
+  //     eight: semi-bold;
+  //     font-size: 20px;
+  //     padding: 4px 12px;
+  //     background-color: $white;
+  //     transition: all 1.5s;
+  //     border: 1px solid $button;
+  //   }
+  // }
 }
 
 .review-card {
