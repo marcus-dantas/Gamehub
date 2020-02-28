@@ -1,49 +1,93 @@
 
+// .show-container {
+//   // display: flex;
+//   // grid-template-columns: 1fr 1fr 1fr;
+//   padding-top: 10%;
+//   padding-left: 5%;
+//   padding-right: 5%;
+//   text-align: center;
+// }
+// .show-container {
+
+//   width: 400px;
+//   height: 400px;
+//   padding-left: 20px;
+//   padding-top: 20px;
+//   // position: relative;
+//   background: $orange;
+//   border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+//   box-shadow: 20px 20px rgba(0,0,0,.15);
+//   transition: all .4s ease;
+//   margin: 0px auto;
+// }
+
+// .show-card {
+
+//   width: 400px;
+//   height: 400px;
+//   padding-left: 20px;
+//   padding-top: 20px;
+//   position: relative;
+//   background: $orange;
+//   border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+//   box-shadow: 20px 20px rgba(0,0,0,.15);
+//   transition: all .4s ease;
+//   margin: 20px;
+// }
+
+
+// .description:hover, .show-card:hover, .form-style-8:hover {
+//   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+//   box-shadow: 10px 10px rgba(0,0,0,.25);
+// }
+
+// .form-style-8 {
+//   position: relative;
+//   background: $orange;
+//   border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+//   box-shadow: 20px 20px rgba(0,0,0,.15);
+//   transition: all .4s ease;
+// }
+
+// .show-form {
+//   width: 500px;
+//   margin: 0px auto;
+//   background-color: red;
+// }
+
 .show-container {
-  display: flex;
-  // grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.description {
-
-  width: 400px;
-  height: 400px;
-  padding-left: 20px;
-  padding-top: 20px;
-  position: relative;
-  background: $orange;
-  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  transition: all .4s ease;
-  margin-top: 20px;
-}
-
-.show-card {
-
-  width: 400px;
-  height: 400px;
-  padding-left: 20px;
-  padding-top: 20px;
-  position: relative;
-  background: $orange;
-  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  transition: all .4s ease;
-  margin: 20px;
-}
-
-
-.description:hover, .show-card:hover, .form-style-8:hover {
-  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-  box-shadow: 10px 10px rgba(0,0,0,.25);
-}
-
-.form-style-8 {
-  position: relative;
-  background: $orange;
-  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  transition: all .4s ease;
+  width: 600px;
+  background-color: $white;
+  border-radius: 7px;
+  margin: 60px auto;
+  padding: 30px;
+  box-shadow: 4px 4px 8px $button;
+  border: 0.5px solid $black;
+  font-weight: 500;
+  color: $textcolor;
+  .show-image {
+    border-radius: 5px;
+    border: 0.5px solid black;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    font-size: 20px;
+  }
+  .btn {
+    background-color: $button;
+    border-radius: 5px;
+    border: 0.5px solid $white;
+    box-shadow: 1px 1px 3px $button;
+    margin-bottom: 10px;
+    &:hover {
+      font-weight: semi-bold;
+      font-size: 20px;
+      padding: 4px 12px;
+      background-color: $white;
+      transition: all 1.5s;
+      border: 1px solid $button;
+    }
+  }
 }
