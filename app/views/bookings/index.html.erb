@@ -1,4 +1,4 @@
-<h1>Your bookings</h1>
+<h1 class="booking-title">Your bookings</h1>
 
     <% @bookings.each do |booking| %>
   <div class="container">
@@ -11,5 +11,11 @@
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
       </div>
+<!--       <div class="review-form">
+        <%#= simple_form_for([ @booking, @review ]) do |form| %>
+          <#%= form.input :content, as: :text %>
+          <#%= form.button :submit %>
+        <#% end %>
+      </div> -->
     </div>
   <% end %>

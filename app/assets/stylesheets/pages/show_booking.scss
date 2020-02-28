@@ -1,5 +1,15 @@
 .container-booking {
+  display: grid;
+  grid-auto-rows: minmax(125px, auto);
   justify-items: center;
+  justify-content: center;
+  grid-gap: 20px 20px;
+  height: 550px;
+}
+
+.booking-title {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
