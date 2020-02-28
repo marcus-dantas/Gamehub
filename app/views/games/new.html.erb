@@ -7,6 +7,7 @@
       <%= f.input :category, collection: ['Action', 'Adventure', 'Casual', 'MMO', 'Racing', 'RPG', 'Sports', 'Strategy']%>
       <%= f.input :description, placeholder:'Call of Duty is a first-person shooter video game franchise published by Activision', as: :text%>
       <%= f.input :daily_price, placeholder: "£££"%>
+      <%= f.input :address, placeholder: "e.g. London, Kingsland Road N27 6GT" %>
        <%= f.input :photo, as: :file %>
       <%= f.submit "Submit"%>
       <% end %>
